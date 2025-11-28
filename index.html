@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Adi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=12" />
+    <!-- inline tiny favicon to avoid 404 for /favicon.ico -->
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAn8B9YlW0QAAAABJRU5ErkJggg==">
+  </head>
+  <body>
+    <!-- Initial Screen (Image 4 style) -->
+    <div id="initialScreen" class="screen screen--initial">
+      <div class="initial-layout">
+        <!-- Left side: Photo and text content -->
+        <div class="initial-left">
+          <div class="initial-photo-card">
+            <img src="photo/adi1.jpeg" alt="Adi" class="initial-photo">
+            <div class="photo-card-shine"></div>
+          </div>
+          
+          <div class="initial-text-content">
+            <h1 class="handwritten-title">Happy Birthday Sowdagor :)</h1>
+            <p class="handwritten-instruction">Click the Cake First :)  ---> </p>
+            
+            <p class="handwritten-note">Nah stop, keep your eyes shut and manifest something good for yourself! (kidding :3 hehe) </p>
+   
+            
+            
+            <button id="startButton" class="button button--hidden">Start</button>
+            <p class="error-message" id="errorMessage" hidden></p>
+          </div>
+        </div>
+        
+        <!-- Right side: Pixel cake -->
+        <div class="initial-right">
+          <div class="pixel-cake-container" id="pixelCake">
+            <div class="pixel-cake">
+              <div class="pixel-cake__tier pixel-cake__tier--bottom"></div>
+              <div class="pixel-cake__tier pixel-cake__tier--middle"></div>
+              <div class="pixel-cake__tier pixel-cake__tier--top"></div>
+              <div class="pixel-cake__candle">
+                <div class="pixel-candle__flame"></div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      
+      <!-- Volume indicator shows after clicking cake -->
+      <div class="volume-indicator" hidden>
+        <div class="volume-bar">
+          <div class="volume-fill" id="volumeFill"></div>
+        </div>
+        <p class="volume-text" id="volumeText">Blow gently towards your microphone...</p>
+      </div>
+    </div>
+
+    <!-- Celebration Screen (Image 5 style) -->
+    <div id="celebrationScreen" class="screen screen--celebration" hidden>
+      <div class="cityscape"></div>
+      
+      <!-- Handwritten Letter with expandable message -->
+      <div class="handwritten-letter" id="handwrittenLetter">
+        <div class="letter-paper">
+          <p class="letter-teaser" id="letterTeaser">Click to read<br>the letter! 📩 </p>
+          <div class="letter-message" id="letterMessage" hidden>
+            <p>Helloooo Adi!</p>
+            <p>Wishing you a gentle birthday; one that brings healing, growth, and people who truly value your presence. May this new age open unexpected doors for you, fill your heart with peace, and bring opportunities that take you closer to the life you dream of._. May every challenge ahead feel a little lighter, and every small win remind you of how far you've already come. ᥫ᭡.</p>
+            <p class="letter-signature">With Tonsss Offf hateee,<br>Bablyyyy</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="table-scene">
+        <div class="checkered-tablecloth"></div>
+        
+        <!-- 4 Photo frames arranged around cake -->
+        <div class="photo-frame photo-frame--1">
+          <div class="photo-frame__border"></div>
+          <div class="photo-frame__photo"><img src="photo/adi2.jpeg" alt="Adi photo 2"></div>
+        </div>
+        <div class="photo-frame photo-frame--2">
+          <div class="photo-frame__border"></div>
+          <div class="photo-frame__photo"><img src="photo/adi5.jpeg" alt="Adi photo 5"></div>
+        </div>
+        <div class="photo-frame photo-frame--3">
+          <div class="photo-frame__border"></div>
+          <div class="photo-frame__photo"><img src="photo/adi6.jpeg" alt="Adi photo 6"></div>
+        </div>
+        <div class="photo-frame photo-frame--4">
+          <div class="photo-frame__border"></div>
+          <div class="photo-frame__photo"><img src="photo/adi1.jpeg" alt="Adi photo 1"></div>
+        </div>
+        
+        <!-- Realistic 3D Cake matching adi4.jpeg -->
+        <div class="realistic-cake" style="display: none;">
+          <div class="cake-plate"></div>
+          <div class="cake-layers">
+            <div class="cake-layer cake-layer--bottom"></div>
+            <div class="cake-layer cake-layer--middle"></div>
+            <div class="cake-layer cake-layer--top">
+              <div class="cake-ribbon"></div>
+              <div class="cake-bow">
+                <div class="bow-loop bow-loop--left"></div>
+                <div class="bow-loop bow-loop--right"></div>
+                <div class="bow-knot"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cake-decorations">
+            <div class="decoration-stick stick--left">
+              <div class="strawberry"></div>
+            </div>
+            <div class="decoration-stick stick--right">
+              <div class="strawberry"></div>
+            </div>
+            <div class="decoration-stick stick--center">
+              <div class="candle-flame"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pixel Cake centered on celebration table -->
+        <div class="pixel-cake-container pixel-cake-container--celebration">
+          <div class="pixel-cake">
+            <div class="pixel-cake__tier pixel-cake__tier--bottom"></div>
+            <div class="pixel-cake__tier pixel-cake__tier--middle"></div>
+            <div class="pixel-cake__tier pixel-cake__tier--top"></div>
+            <div class="pixel-cake__candle">
+              <div class="pixel-candle__flame"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gift Box on the left side -->
+        <div class="gift-box" id="giftBox">
+          <div class="gift-box__body"></div>
+          <div class="gift-box__lid"></div>
+          <div class="gift-box__ribbon-vertical"></div>
+          <div class="gift-box__ribbon-horizontal"></div>
+          <div class="gift-box__bow"></div>
+          
+          <!-- Pixel Chicken - hidden until gift box is clicked -->
+          <div class="pixel-chicken" id="pixelChicken" hidden>
+            <div class="chicken__head">
+              <div class="chicken__eye chicken__eye--left"></div>
+              <div class="chicken__eye chicken__eye--right"></div>
+              <div class="chicken__beak"></div>
+              <div class="chicken__comb"></div>
+            </div>
+            <div class="chicken__body"></div>
+            <div class="chicken__wing"></div>
+            <div class="chicken__leg chicken__leg--left"></div>
+            <div class="chicken__leg chicken__leg--right"></div>
+          </div>
+          
+          <!-- Chicken note - hidden until gift box is clicked -->
+          <div class="chicken-note" id="chickenNote" hidden>ei nao, amr murgi niye moja niba na ar -.-</div>
+        </div>
+      </div>
+      
+      <div class="confetti-celebration"></div>
+    </div>
+
+    <!-- Card Zoom Modal -->
+    <div id="cardModal" class="card-modal" hidden>
+      <div class="card-modal__overlay"></div>
+        <button class="card-modal__close" id="closeCardModal">&times;</button>
+        <div class="card-modal__card">
+          <div class="card-front">
+            <div class="card-bear"></div>
+            <h2 class="card-title">Happy Birthday</h2>
+          </div>
+          <div class="card-inside">
+            <div class="card-message">
+              <p>Helloooo Adiiii!</p>
+              <p>Wishing you a gentle birthday; one that brings healing, growth, and people who truly value your presence.
+                May this new age open unexpected doors for you, fill your heart with peace, and bring opportunities that take you closer to the life you dream of._.
+                May every challenge ahead feel a little lighter, and every small win remind you of how far you’ve already come.</p>
+             
+              <p class="card-signature">With tons offf hateeee -.-,<br>Bablyyyy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background Music - Replace with your own Happy Birthday tune -->
+    <audio id="backgroundMusic" loop>
+      <source src="hbb.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
