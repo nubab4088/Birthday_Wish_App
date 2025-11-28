@@ -1,4 +1,4 @@
-# 🎂 Happy Birthday Adi - Interactive Birthday App
+# 🎂 Happy Birthday  - Interactive Birthday App
 
 A beautiful, modern interactive birthday app with two stunning screens:
 1. **Initial Screen**: Pixel-art inspired cake with handwritten messages (like image 4)
